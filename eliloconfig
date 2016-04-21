@@ -195,12 +195,12 @@ efibootmgr -v | rev | cut -f 2- | rev | grep Boot0 | grep Salix | while read lin
   ENTRY="$(efibootmgr -v | grep "^$(echo $line | cut -b1-8)")"
   dialog --title "`gettext "REMOVE OLD \"Salix\" EFI BOOT ENTRY?"`" \
   --backtitle "`gettext "ELILO (EFI Linux Loader) installation"`" \
-  --yesno "`eval_gettext "An old Salix boot entry has been found in your EFI boot menu. \
+  --yesno "`gettext "An old Salix boot entry has been found in your EFI boot menu. \
 Would you like to remove this before installing the new Salix boot \
 entry?  This is recommended.
 
-Old EFI boot menu entry:
-$ENTRY"`" 0 0
+Old EFI boot menu entry:"`
+$ENTRY" 0 0
   if [ ! $? = 0 ]; then
     continue
   fi
@@ -219,11 +219,11 @@ efibootmgr -v | rev | cut -f 2- | rev | grep Boot0 | grep Salix | while read lin
   if echo $ENTRY | grep -q -F "\EFI\Salix\elilo.efi" ; then
   dialog --title "`gettext "EFI BOOT ENTRY INSTALLED"`" \
   --backtitle "`gettext "ELILO (EFI Linux Loader) installation"`" \
-  --msgbox "`eval_gettext "A Salix boot entry has been installed to your EFI boot
+  --msgbox "`gettext "A Salix boot entry has been installed to your EFI boot
 menu.
 
-EFI boot menu entry:
-$ENTRY"`" 0 0
+EFI boot menu entry:"`
+$ENTRY" 0 0
   fi
 done
 
