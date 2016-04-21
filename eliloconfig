@@ -34,6 +34,7 @@
 
 # Use gettext for translations
 export TEXTDOMAIN=eliloconfig
+export TEXTDOMAINDIR="/usr/share/locale"
 . gettext.sh
 
 TMP=/var/log/setup/tmp
