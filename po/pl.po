@@ -1,0 +1,179 @@
+# This file is put in the public domain.
+#
+# Translators:
+# elesmod <elesmod@lavabit.com>, 2013.
+# Marcin Herda <mherda@slackword.net>, 2013-2014.
+# Marcin Herda <mherda@slackword.net>, 2013.
+# Piotr Maksymiec <parkette.pjm@gmail.com>, 2013, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: salix\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-21 17:45+0300\n"
+"PO-Revision-Date: 2016-04-21 17:42+0200\n"
+"Last-Translator: George Vlahavas <vlahavas~at~gmail~dot~com>\n"
+"Language-Team: Polish (http://www.transifex.com/)\n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#
+# File: 32-14.1-eliloconfig, line: 74
+# File: 64-14.1-eliloconfig, line: 74
+#: eliloconfig:81
+msgid "ERROR:  System is not running under UEFI."
+msgstr "BŁĄD: System aktualnie nie pracuje pod UEFI."
+
+#
+# File: 32-14.1-eliloconfig, line: 84
+# File: 64-14.1-eliloconfig, line: 84
+#: eliloconfig:91
+msgid "ERROR:  No EFI System Partition mounted on /boot/efi."
+msgstr "BŁĄD: Systemowa partycja EFI nie jest zamontowana pod /boot/efi."
+
+#
+# File: 32-14.1-eliloconfig, line: 103
+# File: 64-14.1-eliloconfig, line: 103
+#: eliloconfig:110
+msgid "ERROR:  No kernel found at /boot/vmlinuz."
+msgstr "BŁĄD: Nie znaleziono jądra systemu w /boot/vmlinuz."
+
+#
+# File: 32-14.1-eliloconfig, line: 109
+# File: 64-14.1-eliloconfig, line: 109
+#: eliloconfig:116
+msgid "INSTALL ELILO"
+msgstr "INSTALUJ ELILO"
+
+#
+# File: 32-14.1-eliloconfig, line: 110
+# File: 32-14.1-eliloconfig, line: 155
+# File: 32-14.1-eliloconfig, line: 190
+# File: 32-14.1-eliloconfig, line: 214
+# File: 64-14.1-eliloconfig, line: 110
+# File: 64-14.1-eliloconfig, line: 155
+# File: 64-14.1-eliloconfig, line: 190
+# File: 64-14.1-eliloconfig, line: 214
+#: eliloconfig:117 eliloconfig:162 eliloconfig:197 eliloconfig:221
+msgid "ELILO (EFI Linux Loader) installation"
+msgstr "Instalacja ELILO (EFI Linux Loader)"
+
+#
+# File: 32-14.1-eliloconfig, line: 111
+# File: 64-14.1-eliloconfig, line: 111
+#: eliloconfig:118
+msgid ""
+"ELILO is a Linux boot loader for EFI based systems.  Installing ELILO will "
+"allow you to boot your Linux system from the hard drive after selecting it "
+"from the UEFI boot menu.  Since an EFI System Partition was detected on this "
+"machine, it is recommended that you install ELILO now.  Please select an "
+"option:"
+msgstr ""
+"ELILO jest boot loaderem systemu Linux dla systemów EFI. Instalacja ELILO "
+"pozwoli na wystartowanie systemu Linux z twardego dysku po wybraniu go z "
+"menu startowego UEFI. Jako że partycja systemowa EFI została wykryta nat tym "
+"komputerze, zalecamy teraz zainstalować ELILO. Proszę wybrać jedną z "
+"poniższych opcji:"
+
+#
+# File: 32-14.1-eliloconfig, line: 117
+# File: 64-14.1-eliloconfig, line: 117
+#: eliloconfig:124
+msgid "Install ELILO on the EFI System Partition"
+msgstr "Zainstaluj ELILO na partycji systemowej EFI"
+
+#
+# File: 32-14.1-eliloconfig, line: 118
+# File: 64-14.1-eliloconfig, line: 118
+#: eliloconfig:125
+msgid "Do not install ELILO"
+msgstr "Nie instaluj ELILO"
+
+#
+# File: 32-14.1-eliloconfig, line: 154
+# File: 64-14.1-eliloconfig, line: 154
+#: eliloconfig:161
+msgid "INSTALL BOOT MENU ENTRY?"
+msgstr "ZAINSTALUJ WPIS MENU STARTOWEGO?"
+
+#
+# File: 32-14.1-eliloconfig, line: 156
+# File: 64-14.1-eliloconfig, line: 156
+#: eliloconfig:163
+msgid ""
+"Would you like to install a boot menu entry so that you can easily select "
+"Salix when you boot your machine?  WARNING:  DO NOT install a boot menu "
+"entry on Apple hardware.  Apple computers use a different type of EFI "
+"firmware, and efibootmgr has been known to damage them.  On all other "
+"computers, it is recommended to add a boot menu entry.  Please select an "
+"option:"
+msgstr ""
+"Czy chciałbyś dodać wpis menu startowego tak byś mógł łatwo wybrać system "
+"Salix przy starcie komputera? UWAGA: NIE dodawaj wpisu menu startowego na "
+"sprzęcie firmy Apple. Komputery Apple używają innego typu firmware EFI a "
+"efibootmgr może je uszkodzić. Na wszystkich pozostałych komputerach, "
+"zalecane jest dodać wpis menu startowego. Proszę wybrać jedną z poniższych "
+"opcij:"
+
+#
+# File: 32-14.1-eliloconfig, line: 163
+# File: 64-14.1-eliloconfig, line: 163
+#: eliloconfig:170
+msgid "Install a boot menu entry"
+msgstr "Dodaj wpis menu startowego"
+
+#
+# File: 32-14.1-eliloconfig, line: 164
+# File: 64-14.1-eliloconfig, line: 164
+#: eliloconfig:171
+msgid "Do not install a boot menu entry"
+msgstr "Nie dodawaj wpisu menu startowego"
+
+#
+# File: 32-14.1-eliloconfig, line: 189
+# File: 64-14.1-eliloconfig, line: 189
+#: eliloconfig:196
+msgid "REMOVE OLD Salix EFI BOOT ENTRY?"
+msgstr "USUŃ STARY WPIS STARTOWY Salix?"
+
+#
+# File: 32-14.1-eliloconfig, line: 191
+# File: 64-14.1-eliloconfig, line: 191
+#: eliloconfig:198
+msgid ""
+"An old Salix boot entry has been found in your EFI boot menu. Would you like "
+"to remove this before installing the new Salix boot entry?  This is "
+"recommended.\n"
+"\n"
+"Old EFI boot menu entry:"
+msgstr ""
+"Odnaleziono stary wpis startowy Salix w menu startowym EFI. Czy chciałbyś go "
+"usunąć przed dodaniem nowego wpisu startowego Salix? Jest to zalecane.\n"
+"\n"
+"Stary wpis menu startowego EFI:"
+
+#
+# File: 32-14.1-eliloconfig, line: 213
+# File: 64-14.1-eliloconfig, line: 213
+#: eliloconfig:220
+msgid "EFI BOOT ENTRY INSTALLED"
+msgstr "DODANO WPIS STARTOWY EFI"
+
+#
+# File: 32-14.1-eliloconfig, line: 215
+# File: 64-14.1-eliloconfig, line: 215
+#: eliloconfig:222
+msgid ""
+"A Salix boot entry has been installed to your EFI boot\n"
+"menu.\n"
+"\n"
+"EFI boot menu entry:"
+msgstr ""
+"Wpis startowy Salix został dodany do menu startowego\n"
+" EFI.\n"
+"\n"
+"Wpis startowy menu EFI:"

@@ -1,0 +1,181 @@
+# This file is put in the public domain.
+#
+# Translators:
+# diantre, 2013
+# Diantre, 2013
+# diantre, 2013-2014, 2016
+# Eduardo Jiménez <eddojh@gmail.com>, 2013
+# diantre, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Salix-14.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-21 17:45+0300\n"
+"PO-Revision-Date: 2016-04-21 17:41+0200\n"
+"Last-Translator: George Vlahavas <vlahavas~at~gmail~dot~com>\n"
+"Language-Team: Spanish (Latin America) (http://www.transifex.com/Language: "
+"es_419\n"
+"Language: es_419\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#
+# File: 32-eliloconfig, line: 74
+# File: 64-eliloconfig, line: 74
+#: eliloconfig:81
+msgid "ERROR:  System is not running under UEFI."
+msgstr "ERROR: El sistema no está ejecutando UEFI."
+
+#
+# File: 32-eliloconfig, line: 84
+# File: 64-eliloconfig, line: 84
+#: eliloconfig:91
+msgid "ERROR:  No EFI System Partition mounted on /boot/efi."
+msgstr "ERROR: No hay Partición de Sistema EFI montada en /boot/efi."
+
+#
+# File: 32-eliloconfig, line: 103
+# File: 64-eliloconfig, line: 103
+#: eliloconfig:110
+msgid "ERROR:  No kernel found at /boot/vmlinuz."
+msgstr "ERROR: No se encontró un kernel en /boot/vmlinuz."
+
+#
+# File: 32-eliloconfig, line: 109
+# File: 64-eliloconfig, line: 109
+#: eliloconfig:116
+msgid "INSTALL ELILO"
+msgstr "INSTALAR ELILO"
+
+#
+# File: 32-eliloconfig, line: 110
+# File: 32-eliloconfig, line: 158
+# File: 32-eliloconfig, line: 193
+# File: 32-eliloconfig, line: 217
+# File: 64-eliloconfig, line: 110
+# File: 64-eliloconfig, line: 158
+# File: 64-eliloconfig, line: 193
+# File: 64-eliloconfig, line: 217
+#: eliloconfig:117 eliloconfig:162 eliloconfig:197 eliloconfig:221
+msgid "ELILO (EFI Linux Loader) installation"
+msgstr "Instalación de ELILO (EFI Linux Loader)"
+
+#
+# File: 32-eliloconfig, line: 111
+# File: 64-eliloconfig, line: 111
+#: eliloconfig:118
+msgid ""
+"ELILO is a Linux boot loader for EFI based systems.  Installing ELILO will "
+"allow you to boot your Linux system from the hard drive after selecting it "
+"from the UEFI boot menu.  Since an EFI System Partition was detected on this "
+"machine, it is recommended that you install ELILO now.  Please select an "
+"option:"
+msgstr ""
+"ELILO es un gestor de arranque para sistemas basados en EFI. La instalación "
+"de ELILO le permite iniciar su sistema Linux desde el disco duro después de "
+"seleccionarlo desde el menú de arranque UEFI. Ya que una Partición de "
+"Sistema EFI fue detectada en esta máquina, se recomienda que instale ELILO "
+"ahora. Por favor seleccione una opción:"
+
+#
+# File: 32-eliloconfig, line: 117
+# File: 64-eliloconfig, line: 117
+#: eliloconfig:124
+msgid "Install ELILO on the EFI System Partition"
+msgstr "Instalar ELILO en la Partición de Sistema EFI"
+
+#
+# File: 32-eliloconfig, line: 118
+# File: 64-eliloconfig, line: 118
+#: eliloconfig:125
+msgid "Do not install ELILO"
+msgstr "No instalar ELILO"
+
+#
+# File: 32-eliloconfig, line: 157
+# File: 64-eliloconfig, line: 157
+#: eliloconfig:161
+msgid "INSTALL BOOT MENU ENTRY?"
+msgstr "¿INSTALAR ENTRADA EN EL MENÚ DE ARRANQUE?"
+
+#
+# File: 32-eliloconfig, line: 159
+# File: 64-eliloconfig, line: 159
+#: eliloconfig:163
+msgid ""
+"Would you like to install a boot menu entry so that you can easily select "
+"Salix when you boot your machine?  WARNING:  DO NOT install a boot menu "
+"entry on Apple hardware.  Apple computers use a different type of EFI "
+"firmware, and efibootmgr has been known to damage them.  On all other "
+"computers, it is recommended to add a boot menu entry.  Please select an "
+"option:"
+msgstr ""
+"¿Desea instalar una entrada en el menú de arranque para que pueda "
+"seleccionar fácilmente Salix cuando inicia su máquina? ADVERTENCIA: NO "
+"INSTALE una entrada en el menú de arranque en hardware Apple. Las "
+"computadoras Apple usan un tipo diferente de firmware EFI, y se sabeque "
+"efibootmgr las daña. En todas las demás computadoras, se recomienda agregar "
+"la entrada al menú de arranque. Por favor seleccione una opción:"
+
+#
+# File: 32-eliloconfig, line: 166
+# File: 64-eliloconfig, line: 166
+#: eliloconfig:170
+msgid "Install a boot menu entry"
+msgstr "Instalar una entrada al menú de arranque"
+
+#
+# File: 32-eliloconfig, line: 167
+# File: 64-eliloconfig, line: 167
+#: eliloconfig:171
+msgid "Do not install a boot menu entry"
+msgstr "No instalar una entrada en el menú de arranque"
+
+#
+# File: 32-eliloconfig, line: 192
+# File: 64-eliloconfig, line: 192
+#: eliloconfig:196
+msgid "REMOVE OLD Salix EFI BOOT ENTRY?"
+msgstr "¿ELIMINAR ANTIGUA ENTRADA DE ARRANQUE Salix EFI?"
+
+#
+# File: 32-eliloconfig, line: 194
+# File: 64-eliloconfig, line: 194
+#: eliloconfig:198
+msgid ""
+"An old Salix boot entry has been found in your EFI boot menu. Would you like "
+"to remove this before installing the new Salix boot entry?  This is "
+"recommended.\n"
+"\n"
+"Old EFI boot menu entry:"
+msgstr ""
+"Una entrada de arranque antigua de Salix ha sido encontrada en su menú de "
+"arranque EFI. ¿Desea eliminarla antes de instalar la nueva entrada de "
+"arranque de Salix? Esto es recomendado.\n"
+"\n"
+"Entrada de menú de arranque antigua:"
+
+#
+# File: 32-eliloconfig, line: 216
+# File: 64-eliloconfig, line: 216
+#: eliloconfig:220
+msgid "EFI BOOT ENTRY INSTALLED"
+msgstr "ENTRADA DE ARRANQUE EFI INSTALADA"
+
+#
+# File: 32-eliloconfig, line: 218
+# File: 64-eliloconfig, line: 218
+#: eliloconfig:222
+msgid ""
+"A Salix boot entry has been installed to your EFI boot\n"
+"menu.\n"
+"\n"
+"EFI boot menu entry:"
+msgstr ""
+"Una entrada de arranque de Salix ha sido instalada\n"
+"en su menú de arranque EFI.\n"
+"\n"
+"Entrada de menú de arranque EFI:"

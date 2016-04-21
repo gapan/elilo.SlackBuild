@@ -1,0 +1,179 @@
+# This file is put in the public domain.
+#
+# Translators:
+# Dik Leenheer, 2013, 2014
+# Eric Hameleers <alien@slackware.com>, 2013.
+# Eric Hameleers <eric.hameleers@gmail.com>, 2014,2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: salix\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-21 17:45+0300\n"
+"PO-Revision-Date: 2016-04-21 17:42+0200\n"
+"Last-Translator: George Vlahavas <vlahavas~at~gmail~dot~com>\n"
+"Language-Team: Dutch (http://www.transifex.com/)\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#
+# File: 32-eliloconfig, line: 74
+# File: 64-eliloconfig, line: 74
+#: eliloconfig:81
+msgid "ERROR:  System is not running under UEFI."
+msgstr "FOUT:  Systeem draait niet onder UEFI."
+
+#
+# File: 32-eliloconfig, line: 84
+# File: 64-eliloconfig, line: 84
+#: eliloconfig:91
+msgid "ERROR:  No EFI System Partition mounted on /boot/efi."
+msgstr "FOUT:  Geen EFI systeempartitie aangekoppeld op /boot/efi."
+
+#
+# File: 32-eliloconfig, line: 103
+# File: 64-eliloconfig, line: 103
+#: eliloconfig:110
+msgid "ERROR:  No kernel found at /boot/vmlinuz."
+msgstr "FOUT:  Geen kernel /boot/vmlinuz gevonden."
+
+#
+# File: 32-eliloconfig, line: 109
+# File: 64-eliloconfig, line: 109
+#: eliloconfig:116
+msgid "INSTALL ELILO"
+msgstr "ELILO INSTALLEREN"
+
+#
+# File: 32-eliloconfig, line: 110
+# File: 32-eliloconfig, line: 155
+# File: 32-eliloconfig, line: 190
+# File: 32-eliloconfig, line: 214
+# File: 64-eliloconfig, line: 110
+# File: 64-eliloconfig, line: 155
+# File: 64-eliloconfig, line: 190
+# File: 64-eliloconfig, line: 214
+#: eliloconfig:117 eliloconfig:162 eliloconfig:197 eliloconfig:221
+msgid "ELILO (EFI Linux Loader) installation"
+msgstr "ELILO (EFI Linux Loader) installatie"
+
+#
+# File: 32-eliloconfig, line: 111
+# File: 64-eliloconfig, line: 111
+#: eliloconfig:118
+msgid ""
+"ELILO is a Linux boot loader for EFI based systems.  Installing ELILO will "
+"allow you to boot your Linux system from the hard drive after selecting it "
+"from the UEFI boot menu.  Since an EFI System Partition was detected on this "
+"machine, it is recommended that you install ELILO now.  Please select an "
+"option:"
+msgstr ""
+"ELILO is een Linux bootloader voor op EFI gebaseerde systemen. Installatie "
+"van ELILO stelt je\n"
+"in staat je Linux systeem vanaf de harde schijf op te starten via je "
+"selectie uit het UEFI\n"
+"opstartmenu. Omdat er een EFI systeempartitie op deze machine werd "
+"gedetecteerd wordt aanbevolen nu ELILO te installeren. Kies alsjeblieft een "
+"optie:"
+
+#
+# File: 32-eliloconfig, line: 117
+# File: 64-eliloconfig, line: 117
+#: eliloconfig:124
+msgid "Install ELILO on the EFI System Partition"
+msgstr "Installeer ELILO in de EFI systeempartitie"
+
+#
+# File: 32-eliloconfig, line: 118
+# File: 64-eliloconfig, line: 118
+#: eliloconfig:125
+msgid "Do not install ELILO"
+msgstr "Installeer ELILO niet"
+
+#
+# File: 32-eliloconfig, line: 154
+# File: 64-eliloconfig, line: 154
+#: eliloconfig:161
+msgid "INSTALL BOOT MENU ENTRY?"
+msgstr "OPTIE AAN OPSTARTMENU TOEVOEGEN?"
+
+#
+# File: 32-eliloconfig, line: 156
+# File: 64-eliloconfig, line: 156
+#: eliloconfig:163
+msgid ""
+"Would you like to install a boot menu entry so that you can easily select "
+"Salix when you boot your machine?  WARNING:  DO NOT install a boot menu "
+"entry on Apple hardware.  Apple computers use a different type of EFI "
+"firmware, and efibootmgr has been known to damage them.  On all other "
+"computers, it is recommended to add a boot menu entry.  Please select an "
+"option:"
+msgstr ""
+"Wil je een optie aan het opstartmenu toevoegen zodat je Salix kunt kiezen "
+"als je je machine opstart? WAARSCHUWING: Maak GEEN optie in het opstartmenu "
+"op Apple hardware. Apple computers gebruiken een ander type EFI firmware en "
+"efibootmgr kan deze beschadigen! Op alle andere computers wordt het "
+"aanbevolen een optie in het opstartmenu te maken. Kies alsjeblieft een optie:"
+
+#
+# File: 32-eliloconfig, line: 163
+# File: 64-eliloconfig, line: 163
+#: eliloconfig:170
+msgid "Install a boot menu entry"
+msgstr "Voeg een optie toe aan het opstartmenu"
+
+#
+# File: 32-eliloconfig, line: 164
+# File: 64-eliloconfig, line: 164
+#: eliloconfig:171
+msgid "Do not install a boot menu entry"
+msgstr "Voeg geen optie toe aan het opstartmenu"
+
+#
+# File: 32-eliloconfig, line: 189
+# File: 64-eliloconfig, line: 189
+#: eliloconfig:196
+msgid "REMOVE OLD Salix EFI BOOT ENTRY?"
+msgstr "OUDE Salix EFI OPSTART OPTIE WISSEN? "
+
+#
+# File: 32-eliloconfig, line: 191
+# File: 64-eliloconfig, line: 191
+#: eliloconfig:198
+msgid ""
+"An old Salix boot entry has been found in your EFI boot menu. Would you like "
+"to remove this before installing the new Salix boot entry?  This is "
+"recommended.\n"
+"\n"
+"Old EFI boot menu entry:"
+msgstr ""
+"Een oude Salix opstart-optie gevonden in je EFI opstartmenu. Wil je deze "
+"verwijderen voordat je de nieuwe opstart-optie toevoegt? Dit wordt "
+"aanbevolen.\n"
+"\n"
+"Oud EFI opstartmenu-optie:"
+
+#
+# File: 32-eliloconfig, line: 213
+# File: 64-eliloconfig, line: 213
+#: eliloconfig:220
+msgid "EFI BOOT ENTRY INSTALLED"
+msgstr "OPTIE IN EFI OPSTARTMENU GEMAAKT"
+
+#
+# File: 32-eliloconfig, line: 215
+# File: 64-eliloconfig, line: 215
+#: eliloconfig:222
+msgid ""
+"A Salix boot entry has been installed to your EFI boot\n"
+"menu.\n"
+"\n"
+"EFI boot menu entry:"
+msgstr ""
+"Salix opstartmenu-optie toegevoegd aan je EFI opstart-\n"
+"menu.\n"
+"\n"
+"EFI opstartmenu-optie:"
