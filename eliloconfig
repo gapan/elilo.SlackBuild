@@ -2,6 +2,9 @@
 # Copyright 2013, 2016  Patrick Volkerding, Sebeka, Minnesota, USA
 # All rights reserved.
 #
+# Modified by George Vlahavas for Salix, 2016
+# Modified by Didier Spaier for gettext support, 2016
+#
 # Redistribution and use of this script, with or without modification, is
 # permitted provided that the following conditions are met:
 #
@@ -28,6 +31,10 @@
 #
 # The EFI System Partition is expected to be mounted on /boot/efi before
 # running this script.
+
+# Use gettext for translations
+export TEXTDOMAIN=eliloconfig
+. gettext.sh
 
 TMP=/var/log/setup/tmp
 
@@ -70,7 +77,8 @@ fi
 # If the system is not running under EFI, skip running this script:
 if [ ! -d /sys/firmware/efi ]; then
   if [ "$T_PX" = "/" ]; then
-    echo "ERROR:  System is not running under UEFI."
+    gettext "ERROR:  System is not running under UEFI."
+    echo
   fi
   exit
 fi
@@ -79,7 +87,8 @@ fi
 if ! mount | grep vfat | grep -wq /boot/efi ; then
   if ! mount | grep vfat | grep -wq /mnt/boot/efi ; then
     if [ "$T_PX" = "/" ]; then
-      echo "ERROR:  No EFI System Partition mounted on /boot/efi."
+      gettext "ERROR:  No EFI System Partition mounted on /boot/efi."
+      echo
     fi
     exit
   fi
@@ -97,21 +106,22 @@ fi
 # There better be a kernel:
 if [ ! -r $T_PX/boot/vmlinuz ]; then
   if [ "$T_PX" = "/" ]; then
-    echo "ERROR:  No kernel found at /boot/vmlinuz."
+    gettext "ERROR:  No kernel found at /boot/vmlinuz."
+    echo
   fi
   exit
 fi
 
-dialog --title "INSTALL ELILO" \
---backtitle "ELILO (EFI Linux Loader) installation" \
---menu "ELILO is a Linux boot loader for \
+dialog --title "`gettext "INSTALL ELILO"`" \
+--backtitle "`gettext "ELILO (EFI Linux Loader) installation"`" \
+--menu "`gettext "ELILO is a Linux boot loader for \
 EFI based systems.  Installing ELILO will allow you to boot your Linux \
 system from the hard drive after selecting it from the UEFI boot menu.  \
 Since an EFI System Partition was detected on this machine, it is \
-recommended that you install ELILO now.  Please select an option:" \
-13 70 2 \
-"install" "Install ELILO on the EFI System Partition" \
-"skip" "Do not install ELILO" 2> $TMP/reply
+recommended that you install ELILO now.  Please select an option:"`" \
+0 0 0 \
+"install" "`gettext "Install ELILO on the EFI System Partition"`" \
+"skip" "`gettext "Do not install ELILO"`" 2> $TMP/reply
 if [ $? = 1 -o $? = 255 ]; then
   exit
 fi
@@ -147,17 +157,17 @@ cat << EOF >> $T_PX/boot/efi/EFI/Salix/elilo.conf
         append="root=$ROOT_DEVICE vga=normal ro"
 EOF
 
-dialog --title "INSTALL BOOT MENU ENTRY?" \
---backtitle "ELILO (EFI Linux Loader) installation" \
---menu "Would you like to install \
+dialog --title "`gettext "INSTALL BOOT MENU ENTRY?"`" \
+--backtitle "`gettext "ELILO (EFI Linux Loader) installation"`" \
+--menu "`gettext "Would you like to install \
 a boot menu entry so that you can easily select Salix when you boot your \
 machine?  WARNING:  DO NOT install a boot menu entry on Apple hardware.  \
 Apple computers use a different type of EFI firmware, and efibootmgr has \
 been known to damage them.  On all other computers, it is recommended to add \
-a boot menu entry.  Please select an option:" \
-14 70 2 \
-"install" "Install a boot menu entry" \
-"skip" "Do not install a boot menu entry" 2> $TMP/reply
+a boot menu entry.  Please select an option:"`" \
+0 0 0 \
+"install" "`gettext "Install a boot menu entry"`" \
+"skip" "`gettext "Do not install a boot menu entry"`" 2> $TMP/reply
 if [ $? = 1 -o $? = 255 ]; then
   exit
 fi
@@ -182,11 +192,14 @@ efibootmgr -v | rev | cut -f 2- | rev | grep Boot0 | grep Salix | while read lin
     continue
   fi
   ENTRY="$(efibootmgr -v | grep "^$(echo $line | cut -b1-8)")"
-  dialog --title "REMOVE OLD \"Salix\" EFI BOOT ENTRY?" \
-  --backtitle "ELILO (EFI Linux Loader) installation" \
-  --yesno "An old Salix boot entry has been found in your EFI boot menu. \
+  dialog --title "`gettext "REMOVE OLD \"Salix\" EFI BOOT ENTRY?"`" \
+  --backtitle "`gettext "ELILO (EFI Linux Loader) installation"`" \
+  --yesno "`eval_gettext "An old Salix boot entry has been found in your EFI boot menu. \
 Would you like to remove this before installing the new Salix boot \
-entry?  This is recommended.\n\nOld EFI boot menu entry:\n$ENTRY" 13 70
+entry?  This is recommended.
+
+Old EFI boot menu entry:
+$ENTRY"`" 0 0
   if [ ! $? = 0 ]; then
     continue
   fi
@@ -203,10 +216,13 @@ efibootmgr -v | rev | cut -f 2- | rev | grep Boot0 | grep Salix | while read lin
   fi
   ENTRY="$(efibootmgr -v | grep "^$(echo $line | cut -b1-8)")"
   if echo $ENTRY | grep -q -F "\EFI\Salix\elilo.efi" ; then
-  dialog --title "EFI BOOT ENTRY INSTALLED" \
-  --backtitle "ELILO (EFI Linux Loader) installation" \
-  --msgbox "A Salix boot entry has been installed to your EFI boot
-menu.\n\nEFI boot menu entry:\n$ENTRY" 11 70
+  dialog --title "`gettext "EFI BOOT ENTRY INSTALLED"`" \
+  --backtitle "`gettext "ELILO (EFI Linux Loader) installation"`" \
+  --msgbox "`eval_gettext "A Salix boot entry has been installed to your EFI boot
+menu.
+
+EFI boot menu entry:
+$ENTRY"`" 0 0
   fi
 done
 
