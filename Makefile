@@ -40,3 +40,11 @@ install:
 		install -m 644 $$i \
 		$(DESTDIR)/$(PACKAGE_LOCALE_DIR)/`basename $$i|sed "s/.mo//"`/LC_MESSAGES/eliloconfig.mo; \
 	done;
+
+.PHONY: tx-pull
+tx-pull:
+	tx pull -a
+	for i in `ls po/*.po`;do \
+		msgfmt --statistics $$i 2>&1 | grep "^0 translated" > /dev/null && rm $$i; \
+	done
+	rm -f messages.mo
