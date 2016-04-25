@@ -10,6 +10,7 @@ mo:
 		msgfmt $$i -o `echo $$i | sed "s/\.po//"`.mo; \
 		) \
 	done
+	rm -f messages.mo
 
 .PHONY: pot
 pot:
