@@ -113,6 +113,33 @@ if [ ! -r $T_PX/boot/vmlinuz ]; then
   exit
 fi
 
+# Determine full distro name
+#
+# OK, so this is the main distro name:
+DNAME="Salix"
+# Let's start with blank edition and version
+EDITION=""
+VERSION=""
+# If an edition file exists, use it.
+if [ -f $T_PX/etc/salix-edition ]; then
+  EDITION="-`grep -v '^#' $T_PX/etc/salix-edition | head -n 1 | tr ' ' '_'`"
+fi
+# Now, let's determine the version
+# this should always be there in a salix installation
+if [ -f $T_PX/usr/share/salixtools/salix-version ]; then
+  VERSION="-`cat $T_PX/usr/share/salixtools/salix-version`"
+# or maybe it's a slint installation that does not have salixtools. In
+# that case, extract the version from the slint-version file.
+elif [ -f $T_PX/etc/slint-version ]; then
+  VERSION="-`head -n 1 $T_PX/etc/slint-version | sed "s/Slint//" | tr -d ' '`"
+# or finally, get the version as it appears in the slackware-version
+# file
+elif [ -f $T_PX/etc/slackware-version ]; then
+  VERSION="-`head -n 1 $T_PX /etc/slackware-version | sed "s/Slackware//" | tr -d ' '`"
+fi
+FULL_DISTRO_NAME="${DNAME}${EDITION}${VERSION}"
+
+
 dialog --title "`gettext "INSTALL ELILO"`" \
 --backtitle "`gettext "ELILO (EFI Linux Loader) installation"`" \
 --menu "`gettext "ELILO is a Linux boot loader for \
@@ -132,28 +159,28 @@ if [ "$REPLY" = "skip" ]; then
   exit
 fi
 
-mkdir -p $T_PX/boot/efi/EFI/Salix 1> /dev/null 2> /dev/null
-cat << EOF > $T_PX/boot/efi/EFI/Salix/elilo.conf
+mkdir -p $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME} 1> /dev/null 2> /dev/null
+cat << EOF > $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME}/elilo.conf
 chooser=simple
 delay=1
 timeout=1
 #
 EOF
-cp -a $T_PX/boot/elilo-x86_64.efi $T_PX/boot/efi/EFI/Salix/elilo.efi 1> /dev/null 2> /dev/null
-cp $T_PX/boot/vmlinuz $T_PX/boot/efi/EFI/Salix 1> /dev/null 2> /dev/null
-cat << EOF >> $T_PX/boot/efi/EFI/Salix/elilo.conf
+cp -a $T_PX/boot/elilo-x86_64.efi $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME}/elilo.efi 1> /dev/null 2> /dev/null
+cp $T_PX/boot/vmlinuz $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME} 1> /dev/null 2> /dev/null
+cat << EOF >> $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME}/elilo.conf
 image=vmlinuz
         label=vmlinuz
 EOF
-touch -r $T_PX/boot/vmlinuz $T_PX/boot/efi/EFI/Salix/vmlinuz
+touch -r $T_PX/boot/vmlinuz $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME}/vmlinuz
 if [ -r $T_PX/boot/initrd.gz ]; then
-  cp $T_PX/boot/initrd.gz $T_PX/boot/efi/EFI/Salix 1> /dev/null 2> /dev/null
-  touch -r $T_PX/boot/initrd.gz $T_PX/boot/efi/EFI/Salix/initrd.gz
-  cat << EOF >> $T_PX/boot/efi/EFI/Salix/elilo.conf
+  cp $T_PX/boot/initrd.gz $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME} 1> /dev/null 2> /dev/null
+  touch -r $T_PX/boot/initrd.gz $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME}/initrd.gz
+  cat << EOF >> $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME}/elilo.conf
         initrd=initrd.gz
 EOF
 fi
-cat << EOF >> $T_PX/boot/efi/EFI/Salix/elilo.conf
+cat << EOF >> $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME}/elilo.conf
         read-only
         append="root=$ROOT_DEVICE vga=normal ro"
 EOF
@@ -187,9 +214,9 @@ if [ ! -d /sys/firmware/efi/vars ]; then
   exit
 fi
 
-efibootmgr -v | rev | cut -f 2- | rev | grep Boot0 | grep Salix | while read line ; do
+efibootmgr -v | rev | cut -f 2- | rev | grep Boot0 | grep "${FULL_DISTRO_NAME}" | while read line ; do
   # Reject entries that don't exactly match as not our business
-  if [ ! "$(echo $line | cut -f 2- -d ' ')" = "Salix" ]; then
+  if [ ! "$(echo $line | cut -f 2- -d ' ')" = "${FULL_DISTRO_NAME}" ]; then
     continue
   fi
   ENTRY="$(efibootmgr -v | grep "^$(echo $line | cut -b1-8)")"
@@ -208,15 +235,15 @@ $ENTRY" 0 0
   efibootmgr -q -B -b $(echo $line | cut -b5-8)
 done
 
-efibootmgr -q -c -d $EFI_DEVICE -p $EFI_PARTITION -l "\\EFI\\Salix\\elilo.efi" -L "Salix"
+efibootmgr -q -c -d $EFI_DEVICE -p $EFI_PARTITION -l "\\EFI\\${FULL_DISTRO_NAME}\\elilo.efi" -L "${FULL_DISTRO_NAME}"
 
-efibootmgr -v | rev | cut -f 2- | rev | grep Boot0 | grep Salix | while read line ; do
+efibootmgr -v | rev | cut -f 2- | rev | grep Boot0 | grep "${FULL_DISTRO_NAME}" | while read line ; do
   # Reject entries that don't exactly match as not our business
-  if [ ! "$(echo $line | cut -f 2- -d ' ')" = "Salix" ]; then
+  if [ ! "$(echo $line | cut -f 2- -d ' ')" = "${FULL_DISTRO_NAME}" ]; then
     continue
   fi
   ENTRY="$(efibootmgr -v | grep "^$(echo $line | cut -b1-8)")"
-  if echo $ENTRY | grep -q -F "\EFI\Salix\elilo.efi" ; then
+  if echo $ENTRY | grep -q -F "\EFI\${FULL_DISTRO_NAME}\elilo.efi" ; then
   dialog --title "`gettext "EFI BOOT ENTRY INSTALLED"`" \
   --backtitle "`gettext "ELILO (EFI Linux Loader) installation"`" \
   --msgbox "`gettext "A Salix boot entry has been installed to your EFI boot
