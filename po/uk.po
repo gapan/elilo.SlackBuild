@@ -1,109 +1,68 @@
-# This file is put in the public domain.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
 # Translators:
-# Dima <whoknows2012@myopera.com>, 2013.
-# Кісіль Андрій <kisilams@gmail.com>, 2013.
-# Кісіль Андрій <kisilams@gmail.com>, 2013-2014.
-# Микола Ткач <Stuartlittle1970@gmail.com>, 2013.
-# Oleh <aalesshhkka@gmail.com>, 2014.
-# Oleh, 2014, 2016.
+# Dima <whoknows2012@myopera.com>, 2013
+# Oleh, 2014,2016
+# Oleh <aalesshhkka@gmail.com>, 2014
+# Кісіль Андрій <kisilams@gmail.com>, 2013
+# Микола Ткач <Stuartlittle1970@gmail.com>, 2013
 msgid ""
 msgstr ""
-"Project-Id-Version: salix\n"
+"Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 17:45+0300\n"
-"PO-Revision-Date: 2016-04-21 17:44+0200\n"
-"Last-Translator: George Vlahavas <vlahavas~at~gmail~dot~com>\n"
-"Language-Team: Ukrainian (http://www.transifex.com/)\n"
-"Language: uk_UA\n"
+"PO-Revision-Date: 2016-04-25 21:13+0000\n"
+"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"Language-Team: Ukrainian (http://www.transifex.com/gapan/salix/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.5.4\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#
-# File: 32-14.1-eliloconfig, line: 74
-# File: 64-14.1-eliloconfig, line: 74
 #: eliloconfig:81
 msgid "ERROR:  System is not running under UEFI."
 msgstr "ПОМИЛКА: Система не використовує UEFI."
 
-#
-# File: 32-14.1-eliloconfig, line: 84
-# File: 64-14.1-eliloconfig, line: 84
 #: eliloconfig:91
 msgid "ERROR:  No EFI System Partition mounted on /boot/efi."
 msgstr "ПОМИЛКА: Немає змонтованого у /boot/efi системного розділу EFI. "
 
-#
-# File: 32-14.1-eliloconfig, line: 103
-# File: 64-14.1-eliloconfig, line: 103
 #: eliloconfig:110
 msgid "ERROR:  No kernel found at /boot/vmlinuz."
 msgstr "ПОМИЛКА: Ядро /boot/vmlinuz не виявлено."
 
-#
-# File: 32-14.1-eliloconfig, line: 109
-# File: 64-14.1-eliloconfig, line: 109
 #: eliloconfig:116
 msgid "INSTALL ELILO"
 msgstr "ВСТАНОВЛЕННЯ ELILO"
 
-#
-# File: 32-14.1-eliloconfig, line: 110
-# File: 32-14.1-eliloconfig, line: 155
-# File: 32-14.1-eliloconfig, line: 190
-# File: 32-14.1-eliloconfig, line: 214
-# File: 64-14.1-eliloconfig, line: 110
-# File: 64-14.1-eliloconfig, line: 155
-# File: 64-14.1-eliloconfig, line: 190
-# File: 64-14.1-eliloconfig, line: 214
 #: eliloconfig:117 eliloconfig:162 eliloconfig:197 eliloconfig:221
 msgid "ELILO (EFI Linux Loader) installation"
 msgstr "Встановлення ELILO (завантажувач Linux для EFI)"
 
-#
-# File: 32-14.1-eliloconfig, line: 111
-# File: 64-14.1-eliloconfig, line: 111
 #: eliloconfig:118
 msgid ""
 "ELILO is a Linux boot loader for EFI based systems.  Installing ELILO will "
 "allow you to boot your Linux system from the hard drive after selecting it "
-"from the UEFI boot menu.  Since an EFI System Partition was detected on this "
-"machine, it is recommended that you install ELILO now.  Please select an "
+"from the UEFI boot menu.  Since an EFI System Partition was detected on this"
+" machine, it is recommended that you install ELILO now.  Please select an "
 "option:"
-msgstr ""
-"ELILO є завантажувачем Linux для систем з EFI. Встановлення ELILO дозволить "
-"завантажувати Linux з жорсткого диску за допомогою вибору його у "
-"завантажувальному меню UEFI. Системний розділ EFI виявлено на цій машині, "
-"рекомендовано встановити ELILO. Виберіть дію:"
+msgstr "ELILO є завантажувачем Linux для систем з EFI. Встановлення ELILO дозволить завантажувати Linux з жорсткого диску за допомогою вибору його у завантажувальному меню UEFI. Системний розділ EFI виявлено на цій машині, рекомендовано встановити ELILO. Виберіть дію:"
 
-#
-# File: 32-14.1-eliloconfig, line: 117
-# File: 64-14.1-eliloconfig, line: 117
 #: eliloconfig:124
 msgid "Install ELILO on the EFI System Partition"
 msgstr "Встановити ELILO на системному розділі EFI"
 
-#
-# File: 32-14.1-eliloconfig, line: 118
-# File: 64-14.1-eliloconfig, line: 118
 #: eliloconfig:125
 msgid "Do not install ELILO"
 msgstr "Не встановлювати ELILO"
 
-#
-# File: 32-14.1-eliloconfig, line: 154
-# File: 64-14.1-eliloconfig, line: 154
 #: eliloconfig:161
 msgid "INSTALL BOOT MENU ENTRY?"
 msgstr "ВСТАНОВИТИ ПУНКТ ЗАВАНТАЖУВАЛЬНОГО МЕНЮ?"
 
-#
-# File: 32-14.1-eliloconfig, line: 156
-# File: 64-14.1-eliloconfig, line: 156
 #: eliloconfig:163
 msgid ""
 "Would you like to install a boot menu entry so that you can easily select "
@@ -112,69 +71,35 @@ msgid ""
 "firmware, and efibootmgr has been known to damage them.  On all other "
 "computers, it is recommended to add a boot menu entry.  Please select an "
 "option:"
-msgstr ""
-"Встановити пункт завантажувального меню, що дозволяє вибирати Salix при "
-"завантаженні машини? УВАГА: НЕ встановлюйте пункт завантажувального меню на "
-"обладнанні Apple. Комп’ютери Apple використовують інший тип прошивок EFI, "
-"які, як відомо, efibootmgr пошкоджує. На решті комп’ютерів пункт "
-"завантажувально меню рекомендовано додати. Виберіть дію:"
+msgstr "Встановити пункт завантажувального меню, що дозволяє вибирати Salix при завантаженні машини? УВАГА: НЕ встановлюйте пункт завантажувального меню на обладнанні Apple. Комп’ютери Apple використовують інший тип прошивок EFI, які, як відомо, efibootmgr пошкоджує. На решті комп’ютерів пункт завантажувально меню рекомендовано додати. Виберіть дію:"
 
-#
-# File: 32-14.1-eliloconfig, line: 163
-# File: 64-14.1-eliloconfig, line: 163
 #: eliloconfig:170
 msgid "Install a boot menu entry"
 msgstr "Встановити пункт завантажувально меню"
 
-#
-# File: 32-14.1-eliloconfig, line: 164
-# File: 64-14.1-eliloconfig, line: 164
 #: eliloconfig:171
 msgid "Do not install a boot menu entry"
 msgstr "Не встановлювати пункт завантажувального меню"
 
-#
-# File: 32-14.1-eliloconfig, line: 189
-# File: 64-14.1-eliloconfig, line: 189
 #: eliloconfig:196
 msgid "REMOVE OLD Salix EFI BOOT ENTRY?"
 msgstr "ВИЛУЧИТИ СТАРИЙ ПУНКТ Salix З МЕНЮ EFI?"
 
-#
-# File: 32-14.1-eliloconfig, line: 191
-# File: 64-14.1-eliloconfig, line: 191
 #: eliloconfig:198
 msgid ""
-"An old Salix boot entry has been found in your EFI boot menu. Would you like "
-"to remove this before installing the new Salix boot entry?  This is "
-"recommended.\n"
+"An old Salix boot entry has been found in your EFI boot menu. Would you like to remove this before installing the new Salix boot entry?  This is recommended.\n"
 "\n"
 "Old EFI boot menu entry:"
-msgstr ""
-"Старий пункт завантаження Salix виявлено у завантажувальному меню EFI. "
-"Бажаєте вилучити його перед встановленням нового пункту завантаження? "
-"Рекомендовано вилучити.\n"
-"\n"
-"Старий завантажувальний пункт меню EFI:"
+msgstr "Старий пункт завантаження Salix виявлено у завантажувальному меню EFI. Бажаєте вилучити його перед встановленням нового пункту завантаження? Рекомендовано вилучити.\n\nСтарий завантажувальний пункт меню EFI:"
 
-#
-# File: 32-14.1-eliloconfig, line: 213
-# File: 64-14.1-eliloconfig, line: 213
 #: eliloconfig:220
 msgid "EFI BOOT ENTRY INSTALLED"
 msgstr "ПУНКТ ЗАВАНТАЖУВАЛЬНОГО МЕНЮ EFI ВСТАНОВЛЕНО"
 
-#
-# File: 32-14.1-eliloconfig, line: 215
-# File: 64-14.1-eliloconfig, line: 215
 #: eliloconfig:222
 msgid ""
 "A Salix boot entry has been installed to your EFI boot\n"
 "menu.\n"
 "\n"
 "EFI boot menu entry:"
-msgstr ""
-"Пункт меню для Salix у завантажувальне меню EFI\n"
-"встановлено.\n"
-"\n"
-"Завантажувальний пункт меню EFI:"
+msgstr "Пункт меню для Salix у завантажувальне меню EFI\nвстановлено.\n\nЗавантажувальний пункт меню EFI:"

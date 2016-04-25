@@ -1,104 +1,63 @@
-# This file is put in the public domain.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
 # Translators:
-# Dan-Simon Myrland <slack2thefuture@gmail.com>, 2015-2016.
 msgid ""
 msgstr ""
-"Project-Id-Version: salix\n"
+"Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 17:45+0300\n"
-"PO-Revision-Date: 2016-04-21 17:42+0200\n"
-"Last-Translator: George Vlahavas <vlahavas~at~gmail~dot~com>\n"
-"Language-Team: Norwegian (http://www.transifex.com/\n"
-"Language: nb_NO\n"
+"PO-Revision-Date: 2016-04-25 21:13+0000\n"
+"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"Language-Team: Norwegian Bokmål (http://www.transifex.com/gapan/salix/language/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nb\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.5.4\n"
 
-#
-# File: 32-eliloconfig, line: 74
-# File: 64-eliloconfig, line: 74
 #: eliloconfig:81
 msgid "ERROR:  System is not running under UEFI."
 msgstr "FEIL: Systemet bruker ikke UEFI."
 
-#
-# File: 32-eliloconfig, line: 84
-# File: 64-eliloconfig, line: 84
 #: eliloconfig:91
 msgid "ERROR:  No EFI System Partition mounted on /boot/efi."
 msgstr "FEIL: Ingen EFI Systempartisjon montert i /boot/efi."
 
-#
-# File: 32-eliloconfig, line: 103
-# File: 64-eliloconfig, line: 103
 #: eliloconfig:110
 msgid "ERROR:  No kernel found at /boot/vmlinuz."
 msgstr "FEIL: Fant ingen kjerne i /boot/vmlinuz."
 
-#
-# File: 32-eliloconfig, line: 109
-# File: 64-eliloconfig, line: 109
 #: eliloconfig:116
 msgid "INSTALL ELILO"
 msgstr "INSTALLER ELILO"
 
-#
-# File: 32-eliloconfig, line: 110
-# File: 32-eliloconfig, line: 155
-# File: 32-eliloconfig, line: 190
-# File: 32-eliloconfig, line: 214
-# File: 64-eliloconfig, line: 110
-# File: 64-eliloconfig, line: 155
-# File: 64-eliloconfig, line: 190
-# File: 64-eliloconfig, line: 214
 #: eliloconfig:117 eliloconfig:162 eliloconfig:197 eliloconfig:221
 msgid "ELILO (EFI Linux Loader) installation"
 msgstr "ELILO (EFI Linux Loader) installasjon"
 
-#
-# File: 32-eliloconfig, line: 111
-# File: 64-eliloconfig, line: 111
 #: eliloconfig:118
 msgid ""
 "ELILO is a Linux boot loader for EFI based systems.  Installing ELILO will "
 "allow you to boot your Linux system from the hard drive after selecting it "
-"from the UEFI boot menu.  Since an EFI System Partition was detected on this "
-"machine, it is recommended that you install ELILO now.  Please select an "
+"from the UEFI boot menu.  Since an EFI System Partition was detected on this"
+" machine, it is recommended that you install ELILO now.  Please select an "
 "option:"
-msgstr ""
-"ELILO er en systemstarter for Linux for EFI baserte systemer. Installasjonen "
-"av ELILO vil la deg starte opp ditt Linux system fra harddisken etter å ha "
-"valgt den fra UEFI oppstarts menyen. Siden en EFI Systempartisjon ble funnet "
-"på denne maskinen er det anbefalt å installere ELILO nå. Vennligst velg et "
-"av alternativene:  "
+msgstr "ELILO er en systemstarter for Linux for EFI baserte systemer. Installasjonen av ELILO vil la deg starte opp ditt Linux system fra harddisken etter å ha valgt den fra UEFI oppstarts menyen. Siden en EFI Systempartisjon ble funnet på denne maskinen er det anbefalt å installere ELILO nå. Vennligst velg et av alternativene:  "
 
-#
-# File: 32-eliloconfig, line: 117
-# File: 64-eliloconfig, line: 117
 #: eliloconfig:124
 msgid "Install ELILO on the EFI System Partition"
 msgstr "Installer ELILO på EFI Systempartisjonen"
 
-#
-# File: 32-eliloconfig, line: 118
-# File: 64-eliloconfig, line: 118
 #: eliloconfig:125
 msgid "Do not install ELILO"
 msgstr "Ikke installer ELILO"
 
-#
-# File: 32-eliloconfig, line: 154
-# File: 64-eliloconfig, line: 154
 #: eliloconfig:161
 msgid "INSTALL BOOT MENU ENTRY?"
 msgstr "INSTALLER OPPFØRING I OPPSTARTS MENYEN?"
 
-#
-# File: 32-eliloconfig, line: 156
-# File: 64-eliloconfig, line: 156
 #: eliloconfig:163
 msgid ""
 "Would you like to install a boot menu entry so that you can easily select "
@@ -107,69 +66,35 @@ msgid ""
 "firmware, and efibootmgr has been known to damage them.  On all other "
 "computers, it is recommended to add a boot menu entry.  Please select an "
 "option:"
-msgstr ""
-"Vil du legge til en oppføring i oppstarts menyen slik at du lett kan velge "
-"Salix når du starter opp maskinen? ADVARSEL: IKKE installer en slik "
-"oppføring på et Apple produkt. Apple maskiner bruker en annen type EFI "
-"firmware, efibootmgr har av og til forårsaket skade på disse. På alle andre "
-"maskiner er det anbefalt å legge til en oppføring i oppstarts menyen. "
-"Vennligst velg et alternativ:"
+msgstr "Vil du legge til en oppføring i oppstarts menyen slik at du lett kan velge Salix når du starter opp maskinen? ADVARSEL: IKKE installer en slik oppføring på et Apple produkt. Apple maskiner bruker en annen type EFI firmware, efibootmgr har av og til forårsaket skade på disse. På alle andre maskiner er det anbefalt å legge til en oppføring i oppstarts menyen. Vennligst velg et alternativ:"
 
-#
-# File: 32-eliloconfig, line: 163
-# File: 64-eliloconfig, line: 163
 #: eliloconfig:170
 msgid "Install a boot menu entry"
 msgstr "Legg til oppføring i oppstarts menyen"
 
-#
-# File: 32-eliloconfig, line: 164
-# File: 64-eliloconfig, line: 164
 #: eliloconfig:171
 msgid "Do not install a boot menu entry"
 msgstr "Ikke legg til oppføring i oppstarts menyen"
 
-#
-# File: 32-eliloconfig, line: 189
-# File: 64-eliloconfig, line: 189
 #: eliloconfig:196
 msgid "REMOVE OLD Salix EFI BOOT ENTRY?"
 msgstr "FJERN GAMMEL Salix OPPSTARTS OPPFØRING?"
 
-#
-# File: 32-eliloconfig, line: 191
-# File: 64-eliloconfig, line: 191
 #: eliloconfig:198
 msgid ""
-"An old Salix boot entry has been found in your EFI boot menu. Would you like "
-"to remove this before installing the new Salix boot entry?  This is "
-"recommended.\n"
+"An old Salix boot entry has been found in your EFI boot menu. Would you like to remove this before installing the new Salix boot entry?  This is recommended.\n"
 "\n"
 "Old EFI boot menu entry:"
-msgstr ""
-"En eldre Salix oppstarts oppføring ble funnet i EFI oppstarts menyen. Vil du "
-"fjerne denne før du legger til den nye Salix oppstarts oppføringen? Dette er "
-"anbefalt.\n"
-"\n"
-"Gammel oppføring i EFI oppstarts meny:"
+msgstr "En eldre Salix oppstarts oppføring ble funnet i EFI oppstarts menyen. Vil du fjerne denne før du legger til den nye Salix oppstarts oppføringen? Dette er anbefalt.\n\nGammel oppføring i EFI oppstarts meny:"
 
-#
-# File: 32-eliloconfig, line: 213
-# File: 64-eliloconfig, line: 213
 #: eliloconfig:220
 msgid "EFI BOOT ENTRY INSTALLED"
 msgstr "EFI OPPSTARTS OPPFØRING LAGT TIL"
 
-#
-# File: 32-eliloconfig, line: 215
-# File: 64-eliloconfig, line: 215
 #: eliloconfig:222
 msgid ""
 "A Salix boot entry has been installed to your EFI boot\n"
 "menu.\n"
 "\n"
 "EFI boot menu entry:"
-msgstr ""
-"En Salix oppstarts oppføring er lagt til i EFI oppstarts menyen.\n"
-"\n"
-"Oppføring i EFI oppstarts meny:"
+msgstr "En Salix oppstarts oppføring er lagt til i EFI oppstarts menyen.\n\nOppføring i EFI oppstarts meny:"

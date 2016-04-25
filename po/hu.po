@@ -3,42 +3,39 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Didier Spaier, 2013
-# Didier Spaier <didier (at) slint (dot) fr>, 2014
-# Didier Spaier <didier@slint.fr>, 2014,2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 17:45+0300\n"
 "PO-Revision-Date: 2016-04-25 21:13+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
-"Language-Team: French (http://www.transifex.com/gapan/salix/language/fr/)\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Hungarian (http://www.transifex.com/gapan/salix/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: hu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: eliloconfig:81
 msgid "ERROR:  System is not running under UEFI."
-msgstr "ERREUR : le système ne fonctionne pas sous UEFI"
+msgstr ""
 
 #: eliloconfig:91
 msgid "ERROR:  No EFI System Partition mounted on /boot/efi."
-msgstr "ERREUR : pas de partition système EFI montée sur /boot/efi"
+msgstr ""
 
 #: eliloconfig:110
 msgid "ERROR:  No kernel found at /boot/vmlinuz."
-msgstr "ERREUR : pas de noyau trouvé à /boot/vmlinuz"
+msgstr ""
 
 #: eliloconfig:116
 msgid "INSTALL ELILO"
-msgstr "INSTALLATION DE ELILO"
+msgstr ""
 
 #: eliloconfig:117 eliloconfig:162 eliloconfig:197 eliloconfig:221
 msgid "ELILO (EFI Linux Loader) installation"
-msgstr "Installation de ELILO (EFI Linux Loader)"
+msgstr ""
 
 #: eliloconfig:118
 msgid ""
@@ -47,19 +44,19 @@ msgid ""
 "from the UEFI boot menu.  Since an EFI System Partition was detected on this"
 " machine, it is recommended that you install ELILO now.  Please select an "
 "option:"
-msgstr "ELILO est in chargeur d'amorçage de Linux pour les systèmes à base d'EFI. Installer ELILO vous permettra d'amorcer votre système Linux depuis le disque dur après l'avoir sélectionné depuis le menu d'amorçage UEFI. Comme une partition système EFI a été détectée sur cette machine, il vous est recommandé d'installer ELILO maintenant. Merci de sélectionner une option :"
+msgstr ""
 
 #: eliloconfig:124
 msgid "Install ELILO on the EFI System Partition"
-msgstr "Installation de ELILO sur la partition système EFI"
+msgstr ""
 
 #: eliloconfig:125
 msgid "Do not install ELILO"
-msgstr "Ne pas installer ELILO"
+msgstr ""
 
 #: eliloconfig:161
 msgid "INSTALL BOOT MENU ENTRY?"
-msgstr "INSTALLER UNE ENTRÉE DE MENU D'AMORÇAGE ?"
+msgstr ""
 
 #: eliloconfig:163
 msgid ""
@@ -69,30 +66,30 @@ msgid ""
 "firmware, and efibootmgr has been known to damage them.  On all other "
 "computers, it is recommended to add a boot menu entry.  Please select an "
 "option:"
-msgstr "Voulez-vous installer une entrée de menu d'amorçage afin de pouvoir aisément sélectionner Salix en démarrant votre machine ? ATTENTION : n'installez PAS une entrée de menu sur une machine Apple. les ordinateur Apple utilisent un autre type de firmware EFI et efibootmgr peut les endommager. Sur tous les autres ordinateurs, il recommandé d'ajouter une entrée de menu. Merci de choisir une option :"
+msgstr ""
 
 #: eliloconfig:170
 msgid "Install a boot menu entry"
-msgstr "Installer une entrée de menu d'amorçage"
+msgstr ""
 
 #: eliloconfig:171
 msgid "Do not install a boot menu entry"
-msgstr "Ne pas installer d'entrée de menu d'amorçage"
+msgstr ""
 
 #: eliloconfig:196
 msgid "REMOVE OLD Salix EFI BOOT ENTRY?"
-msgstr "ENLEVER UNE ANCIENNE ENTRÉE Salix DE MENU D'AMORÇAGE EFI?"
+msgstr ""
 
 #: eliloconfig:198
 msgid ""
 "An old Salix boot entry has been found in your EFI boot menu. Would you like to remove this before installing the new Salix boot entry?  This is recommended.\n"
 "\n"
 "Old EFI boot menu entry:"
-msgstr "Une ancienne entrée Salix a été trouvée dans votre menu d'amorçage EFI. Voulez-vous l'enlever avant d'installer la nouvelle entrée de menu Salix ? C'est recommandé.\n\nAncienne entrée de menu d'amorçage EFI :"
+msgstr ""
 
 #: eliloconfig:220
 msgid "EFI BOOT ENTRY INSTALLED"
-msgstr "ENTRÉE DE MENU EFI INSTALLÉE"
+msgstr ""
 
 #: eliloconfig:222
 msgid ""
@@ -100,4 +97,4 @@ msgid ""
 "menu.\n"
 "\n"
 "EFI boot menu entry:"
-msgstr "Une entrée de menu Salix a été installée dans votre menu d'amorçage EFI.\n\nEntrée de menu EFI :"
+msgstr ""
