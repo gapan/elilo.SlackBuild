@@ -4,8 +4,11 @@ PACKAGE_LOCALE_DIR ?= /usr/share/locale
 .PHONY: mo
 mo:
 	for i in `ls po/*.po`;do \
+		msgfmt --statistics $$i 2>&1 | grep "^0 translated" > /dev/null || \
+		( \
 		echo "Compiling `echo $$i|sed "s|/po||"`"; \
 		msgfmt $$i -o `echo $$i | sed "s/\.po//"`.mo; \
+		) \
 	done
 
 .PHONY: pot
