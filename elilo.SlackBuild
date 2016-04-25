@@ -91,6 +91,13 @@ cp -a $CWD/setup.ll.eliloconfig $PKG/var/log/setup
 chown root:root $PKG/var/log/setup/setup.ll.eliloconfig
 chmod 755 $PKG/var/log/setup/setup.ll.eliloconfig
 
+# Install translations for eliloconfig
+(
+cd $CWD
+make
+make install DESTDIR=$PKG/
+)
+
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cp -a \
   ChangeLog LIMITATIONS README README.gnu-efi TODO docs/* \
