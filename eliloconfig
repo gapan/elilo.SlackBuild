@@ -32,11 +32,6 @@
 # The EFI System Partition is expected to be mounted on /boot/efi before
 # running this script.
 
-# Use gettext for translations
-export TEXTDOMAIN=eliloconfig
-export TEXTDOMAINDIR="/usr/share/locale"
-. gettext.sh
-
 TMP=/var/log/setup/tmp
 
 # Set the OS root directory (called T_PX for some unknown reason).
@@ -64,6 +59,11 @@ if [ ! -d "$T_PX" ]; then
     fi
   fi
 fi
+
+# Use gettext for translations
+export TEXTDOMAIN=eliloconfig
+export TEXTDOMAINDIR="$T_PX/usr/share/locale"
+. gettext.sh
 
 # Determine the root partition (such as /dev/sda1)
 ROOT_DEVICE=$2
