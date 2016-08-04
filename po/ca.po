@@ -3,43 +3,40 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Didier Spaier, 2013
-# Didier Spaier <didier (at) slint (dot) fr>, 2014
-# Didier Spaier <didier@slint.fr>, 2014,2016
-# Nicolas Cuffia <cuffia.cuceglio@vivaldi.net>, 2016
+# Davidmp <medipas@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 17:45+0300\n"
-"PO-Revision-Date: 2016-07-25 18:18+0000\n"
-"Last-Translator: Nicolas Cuffia <cuffia.cuceglio@vivaldi.net>\n"
-"Language-Team: French (http://www.transifex.com/gapan/salix/language/fr/)\n"
+"PO-Revision-Date: 2016-06-28 16:09+0000\n"
+"Last-Translator: Davidmp <medipas@gmail.com>\n"
+"Language-Team: Catalan (http://www.transifex.com/gapan/salix/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: eliloconfig:81
 msgid "ERROR:  System is not running under UEFI."
-msgstr "ERREUR : Le système ne fonctionne pas sous UEFI"
+msgstr "ERROR: el sistema no s'està executant amb UEFI."
 
 #: eliloconfig:91
 msgid "ERROR:  No EFI System Partition mounted on /boot/efi."
-msgstr "ERREUR : Pas de partition système EFI montée sur /boot/efi."
+msgstr "ERROR: no hi ha cap partició de sistema EFI muntada a /boot/efi."
 
 #: eliloconfig:110
 msgid "ERROR:  No kernel found at /boot/vmlinuz."
-msgstr "ERREUR : Pas de noyau trouvé à /boot/vmlinuz"
+msgstr "ERROR: no s'ha trobat cap nucli a /boot/vmlinuz."
 
 #: eliloconfig:116
 msgid "INSTALL ELILO"
-msgstr "INSTALLATION DE ELILO"
+msgstr "INSTAL·LA ELILO"
 
 #: eliloconfig:117 eliloconfig:162 eliloconfig:197 eliloconfig:221
 msgid "ELILO (EFI Linux Loader) installation"
-msgstr "Installation de ELILO (EFI Linux Loader)"
+msgstr "Instal·lació d'ELILO (Carregador de Linux EFI)"
 
 #: eliloconfig:118
 msgid ""
@@ -48,19 +45,19 @@ msgid ""
 "from the UEFI boot menu.  Since an EFI System Partition was detected on this"
 " machine, it is recommended that you install ELILO now.  Please select an "
 "option:"
-msgstr "ELILO est un chargeur d'amorçage Linux pour les systèmes à base d'EFI. Installer ELILO vous permettra d'amorcer votre système Linux depuis le disque dur après l'avoir sélectionné depuis le menu d'amorçage UEFI. Comme une partition système EFI a été détectée sur cette machine, il vous est recommandé d'installer ELILO maintenant. Merci de sélectionner une option :"
+msgstr "L'ELILO és un gestor d'arrencada de Linux per a sistemes basats en EFI. Instal·lar ELILO permet arrencar el sistema Linux des del disc dur després de seleccionar-lo al menú d'arrencada UEFI. Ja que s'ha detectat una partició de sistema EFI en aquesta màquina, es recomana que instal·leu l'ELILO ara. Si us plau, seleccioneu una opció:"
 
 #: eliloconfig:124
 msgid "Install ELILO on the EFI System Partition"
-msgstr "Installation de ELILO sur la partition système EFI"
+msgstr "Instal·la ELILO a la partició de sistema EFI"
 
 #: eliloconfig:125
 msgid "Do not install ELILO"
-msgstr "Ne pas installer ELILO"
+msgstr "No instal·lis ELILO"
 
 #: eliloconfig:161
 msgid "INSTALL BOOT MENU ENTRY?"
-msgstr "INSTALLER UNE ENTRÉE DE MENU D'AMORÇAGE ?"
+msgstr "VOLEU INSTAL·LAR L'ENTRADA DE MENÚ D'ARRENCADA?"
 
 #: eliloconfig:163
 msgid ""
@@ -70,30 +67,30 @@ msgid ""
 "firmware, and efibootmgr has been known to damage them.  On all other "
 "computers, it is recommended to add a boot menu entry.  Please select an "
 "option:"
-msgstr "Voulez-vous installer une entrée de menu d'amorçage afin de pouvoir aisément sélectionner Salix en démarrant votre machine ? ATTENTION : n'installez PAS une entrée de menu sur une machine Apple. les ordinateur Apple utilisent un autre type de firmware EFI et efibootmgr peut les endommager. Sur tous les autres ordinateurs, il recommandé d'ajouter une entrée de menu. Merci de choisir une option :"
+msgstr "Voleu instal·lar una entrada de menú d'arrencada perquè es pugui seleccionar fàcilment Salix quan s'engegui l'ordinador? AVÍS: no instal·leu una entrada al menú d'arrencada als equips d'Apple. Els ordinadors d'Apple utilitzen un tipus diferent de microprogramari EFI i se sap que efibootmgr els danya. En tots els altres ordinadors, es recomana afegir una entrada al menú d'arrencada. Si us plau, eleccioneu una opció:"
 
 #: eliloconfig:170
 msgid "Install a boot menu entry"
-msgstr "Installer une entrée de menu d'amorçage"
+msgstr "Instal·la una entrada de menú d'arrencada"
 
 #: eliloconfig:171
 msgid "Do not install a boot menu entry"
-msgstr "Ne pas installer d'entrée de menu d'amorçage"
+msgstr "No instal·lis una entrada de menú d'arrencada"
 
 #: eliloconfig:196
 msgid "REMOVE OLD Salix EFI BOOT ENTRY?"
-msgstr "ENLEVER UNE ANCIENNE ENTRÉE Salix DE MENU D'AMORÇAGE EFI?"
+msgstr "VOLEU ELIMINAR L'ENTRADA DE MENÚ D'ARRENCADA ANTIGA DE Salix?"
 
 #: eliloconfig:198
 msgid ""
 "An old Salix boot entry has been found in your EFI boot menu. Would you like to remove this before installing the new Salix boot entry?  This is recommended.\n"
 "\n"
 "Old EFI boot menu entry:"
-msgstr "Une ancienne entrée Salix a été trouvée dans votre menu d'amorçage EFI. Voulez-vous l'enlever avant d'installer la nouvelle entrée de menu Salix ? Cela est recommandé.\n\nAncienne entrée de menu d'amorçage EFI :"
+msgstr "S'ha trobat una entrada antiga de Salix al menú d'arrencada EFI. Voleu eliminar-la abans d'instal·lar la nova entrada d'arrencada de Salix? És recomanable.\n\nEntrada de menú d'arrencada EFI antiga:"
 
 #: eliloconfig:220
 msgid "EFI BOOT ENTRY INSTALLED"
-msgstr "ENTRÉE DE MENU EFI INSTALLÉE"
+msgstr "ENTRADA DE MENÚ D'ARRENCADA EFI INSTAL·LADA"
 
 #: eliloconfig:222
 msgid ""
@@ -101,4 +98,4 @@ msgid ""
 "menu.\n"
 "\n"
 "EFI boot menu entry:"
-msgstr "Une entrée de menu Salix a été installée dans votre menu d'amorçage EFI.\n\nEntrée de menu EFI :"
+msgstr "S'ha instal·lat una entrada d'arrencada de Salix al menú d'arrencada EFI.\n\nEntrada de menú d'arrencada EFI:"
