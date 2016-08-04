@@ -22,7 +22,7 @@
 
 PKGNAM=elilo
 VERSION=${VERSION:-$(echo $PKGNAM*.tar.?z* | rev | cut -f 2 -d - | rev)}
-BUILD=${BUILD:-1gv}
+BUILD=${BUILD:-3gv}
 
 if [ -z "$ARCH" ]; then
   case "$( uname -m )" in
