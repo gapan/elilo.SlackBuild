@@ -131,10 +131,12 @@ if [ -f $T_PX/usr/share/salixtools/salix-version ]; then
 # or maybe it's a slint installation that does not have salixtools. In
 # that case, extract the version from the slint-version file.
 elif [ -f $T_PX/etc/slint-version ]; then
+  DNAME="Slint"
   VERSION="-`head -n 1 $T_PX/etc/slint-version | sed "s/Slint//" | tr -d ' '`"
 # or finally, get the version as it appears in the slackware-version
 # file
 elif [ -f $T_PX/etc/slackware-version ]; then
+  DNAME="Slackware"
   VERSION="-`head -n 1 $T_PX /etc/slackware-version | sed "s/Slackware//" | tr -d ' '`"
 fi
 FULL_DISTRO_NAME="${DNAME}${EDITION}${VERSION}"
