@@ -1,3 +1,4 @@
 elilo-*-all.tar.xz
-elilo.x64.rebuilt.tar.xz
+elilo.double.kernel.size.limit.diff.gz
+elilo.loader.binaries.tar.xz
 po/*.mo
