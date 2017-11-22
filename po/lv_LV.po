@@ -3,40 +3,40 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Davidmp <medipas@gmail.com>, 2016
+# Gatis Kalniņš <inboksis@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 17:45+0300\n"
-"PO-Revision-Date: 2017-09-23 00:20+0000\n"
-"Last-Translator: Davidmp <medipas@gmail.com>\n"
-"Language-Team: Catalan (http://www.transifex.com/gapan/salix/language/ca/)\n"
+"PO-Revision-Date: 2017-09-23 22:27+0000\n"
+"Last-Translator: Gatis Kalniņš <inboksis@gmail.com>\n"
+"Language-Team: Latvian (Latvia) (http://www.transifex.com/gapan/salix/language/lv_LV/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ca\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: lv_LV\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
 
 #: eliloconfig:81
 msgid "ERROR:  System is not running under UEFI."
-msgstr "ERROR: el sistema no s'està executant amb UEFI."
+msgstr "KĻŪDA: Sistēma nav startēta, izmantojot UEFI."
 
 #: eliloconfig:91
 msgid "ERROR:  No EFI System Partition mounted on /boot/efi."
-msgstr "ERROR: no hi ha cap partició de sistema EFI muntada a /boot/efi."
+msgstr "KĻŪDA: EFI System Partition nav piemontēta uz /boot/efi."
 
 #: eliloconfig:110
 msgid "ERROR:  No kernel found at /boot/vmlinuz."
-msgstr "ERROR: no s'ha trobat cap nucli a /boot/vmlinuz."
+msgstr "KĻŪDA: /boot/vmlinuz nav atrasts kodols."
 
 #: eliloconfig:116
 msgid "INSTALL ELILO"
-msgstr "INSTAL·LA ELILO"
+msgstr "INSTALĒ ELILO"
 
 #: eliloconfig:117 eliloconfig:162 eliloconfig:197 eliloconfig:221
 msgid "ELILO (EFI Linux Loader) installation"
-msgstr "Instal·lació d'ELILO (Carregador de Linux EFI)"
+msgstr "ELILO (EFI Linux Loader) instalēšana"
 
 #: eliloconfig:118
 msgid ""
@@ -45,19 +45,19 @@ msgid ""
 "from the UEFI boot menu.  Since an EFI System Partition was detected on this"
 " machine, it is recommended that you install ELILO now.  Please select an "
 "option:"
-msgstr "L'ELILO és un gestor d'arrencada de Linux per a sistemes basats en EFI. Instal·lar ELILO permet arrencar el sistema Linux des del disc dur després de seleccionar-lo al menú d'arrencada UEFI. Ja que s'ha detectat una partició de sistema EFI en aquesta màquina, es recomana que instal·leu l'ELILO ara. Si us plau, seleccioneu una opció:"
+msgstr ""
 
 #: eliloconfig:124
 msgid "Install ELILO on the EFI System Partition"
-msgstr "Instal·la ELILO a la partició de sistema EFI"
+msgstr "Instalēt ELILO uz EFI System Partition"
 
 #: eliloconfig:125
 msgid "Do not install ELILO"
-msgstr "No instal·lis ELILO"
+msgstr "Neinstalēt ELILO"
 
 #: eliloconfig:161
 msgid "INSTALL BOOT MENU ENTRY?"
-msgstr "VOLEU INSTAL·LAR L'ENTRADA DE MENÚ D'ARRENCADA?"
+msgstr "IZVEIDOT SĀKNĒŠANAS IZVĒLNES IERAKSTU?"
 
 #: eliloconfig:163
 msgid ""
@@ -67,30 +67,30 @@ msgid ""
 "firmware, and efibootmgr has been known to damage them.  On all other "
 "computers, it is recommended to add a boot menu entry.  Please select an "
 "option:"
-msgstr "Voleu instal·lar una entrada de menú d'arrencada perquè es pugui seleccionar fàcilment Salix quan s'engegui l'ordinador? AVÍS: no instal·leu una entrada al menú d'arrencada als equips d'Apple. Els ordinadors d'Apple utilitzen un tipus diferent de microprogramari EFI i se sap que efibootmgr els danya. En tots els altres ordinadors, es recomana afegir una entrada al menú d'arrencada. Si us plau, eleccioneu una opció:"
+msgstr ""
 
 #: eliloconfig:170
 msgid "Install a boot menu entry"
-msgstr "Instal·la una entrada de menú d'arrencada"
+msgstr "Izveido sāknēšanas izvēlnes ierakstu"
 
 #: eliloconfig:171
 msgid "Do not install a boot menu entry"
-msgstr "No instal·lis una entrada de menú d'arrencada"
+msgstr "Neveidot sāknēšanas izvēlnes ierakstu"
 
 #: eliloconfig:196
 msgid "REMOVE OLD Salix EFI BOOT ENTRY?"
-msgstr "VOLEU ELIMINAR L'ENTRADA DE MENÚ D'ARRENCADA ANTIGA DE Salix?"
+msgstr "DZĒST IEPRIEKŠĒJO Salix EFI SĀKNĒŠANAS IERAKSTU?"
 
 #: eliloconfig:198
 msgid ""
 "An old Salix boot entry has been found in your EFI boot menu. Would you like to remove this before installing the new Salix boot entry?  This is recommended.\n"
 "\n"
 "Old EFI boot menu entry:"
-msgstr "S'ha trobat una entrada antiga de Salix al menú d'arrencada EFI. Voleu eliminar-la abans d'instal·lar la nova entrada d'arrencada de Salix? És recomanable.\n\nEntrada de menú d'arrencada EFI antiga:"
+msgstr ""
 
 #: eliloconfig:220
 msgid "EFI BOOT ENTRY INSTALLED"
-msgstr "ENTRADA DE MENÚ D'ARRENCADA EFI INSTAL·LADA"
+msgstr "EFI SĀKNĒŠANAS IERAKSTS IZVEIDOTS"
 
 #: eliloconfig:222
 msgid ""
@@ -98,4 +98,4 @@ msgid ""
 "menu.\n"
 "\n"
 "EFI boot menu entry:"
-msgstr "S'ha instal·lat una entrada d'arrencada de Salix al menú d'arrencada EFI.\n\nEntrada de menú d'arrencada EFI:"
+msgstr "Salix ielādes ieraksts ir izveidots EFI sāknēšanas izvēlnē.\n\nEFI sāknēšanas izvēlnes ieraksts:"

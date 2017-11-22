@@ -8,7 +8,7 @@
 # franzen <slint@schoepfer.info>, 2013
 # Maik Wagner <maikwagner@yahoo.com>, 2013
 # Marcel Saegebarth <marc@mos6581.de>, 2013
-# Marek Srejma <sam@manjaro.org>, 2014
+# Marek Srejma (Sam) <sam@manjaro.org>, 2014
 # Sam <sam@manajro.org>, 2014,2016
 # spongetron <spongetron@gmail.com>, 2013
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 17:45+0300\n"
-"PO-Revision-Date: 2016-04-25 21:13+0000\n"
+"PO-Revision-Date: 2017-09-22 22:49+0000\n"
 "Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/gapan/salix/language/de/)\n"
 "MIME-Version: 1.0\n"
