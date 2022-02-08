@@ -71,7 +71,7 @@ if [ "$ROOT_DEVICE" = "" ]; then
  if [ -r $TMP/SeTrootdev ]; then
   ROOT_DEVICE="$(cat $TMP/SeTrootdev)"
  else
-  ROOT_DEVICE="$(mount | cut -f 1 -d ' ' | head -n 1)"
+  ROOT_DEVICE="$(mount | grep ' / ' | cut -f 1 -d ' ' | head -n 1)"
  fi
 fi
 
@@ -172,21 +172,26 @@ delay=1
 timeout=1
 #
 EOF
-cp -a $T_PX/boot/elilo-x86_64.efi $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME}/elilo.efi 1> /dev/null 2> /dev/null
-cp $T_PX/boot/vmlinuz $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME} 1> /dev/null 2> /dev/null
-cat << EOF >> $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME}/elilo.conf
+cp -a $T_PX/boot/elilo-x86_64.efi $T_PX/boot/efi/EFI/Slackware/elilo.efi 1> /dev/null 2> /dev/null
+if [ -r $T_PX/boot/initrd.gz ]; then
+  cp $T_PX/boot/vmlinuz-generic $T_PX/boot/efi/EFI/Slackware/vmlinuz 1> /dev/null 2> /dev/null
+  touch -r $T_PX/boot/vmlinuz-generic $T_PX/boot/efi/EFI/Slackware/vmlinuz
+  cp $T_PX/boot/initrd.gz $T_PX/boot/efi/EFI/Slackware 1> /dev/null 2> /dev/null
+  touch -r $T_PX/boot/initrd.gz $T_PX/boot/efi/EFI/Slackware/initrd.gz
+  cat << EOF >> $T_PX/boot/efi/EFI/Slackware/elilo.conf
+image=vmlinuz
+        label=vmlinuz
+        initrd=initrd.gz
+EOF
+else
+  cp $T_PX/boot/vmlinuz-huge $T_PX/boot/efi/EFI/Slackware/vmlinuz 1> /dev/null 2> /dev/null
+  touch -r $T_PX/boot/vmlinuz-huge $T_PX/boot/efi/EFI/Slackware/vmlinuz
+  cat << EOF >> $T_PX/boot/efi/EFI/Slackware/elilo.conf
 image=vmlinuz
         label=vmlinuz
 EOF
-touch -r $T_PX/boot/vmlinuz $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME}/vmlinuz
-if [ -r $T_PX/boot/initrd.gz ]; then
-  cp $T_PX/boot/initrd.gz $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME} 1> /dev/null 2> /dev/null
-  touch -r $T_PX/boot/initrd.gz $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME}/initrd.gz
-  cat << EOF >> $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME}/elilo.conf
-        initrd=initrd.gz
-EOF
 fi
-cat << EOF >> $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME}/elilo.conf
+cat << EOF >> $T_PX/boot/efi/EFI/Slackware/elilo.conf
         read-only
         append="root=$ROOT_DEVICE vga=normal ro"
 EOF
@@ -239,9 +244,11 @@ $ENTRY" 0 0
   fi
   # Remove the boot entry:
   efibootmgr -q -B -b $(echo $line | cut -b5-8)
+  sleep 1
 done
 
 efibootmgr -q -c -d $EFI_DEVICE -p $EFI_PARTITION -l "\\EFI\\${FULL_DISTRO_NAME}\\elilo.efi" -L "${FULL_DISTRO_NAME}"
+sleep 1
 
 efibootmgr -v | rev | cut -f 2- | rev | grep Boot0 | grep "${FULL_DISTRO_NAME}" | while read line ; do
   # Reject entries that don't exactly match as not our business
