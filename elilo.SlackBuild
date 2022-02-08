@@ -92,6 +92,7 @@ zcat $CWD/elilo.double.kernel.size.limit.diff.gz | patch -p1 --verbose || exit 1
 # use a 32-bit userspace with an x86_64 kernel.
 cd tools
 make || exit 1
+cd ..
 
 # Install the files in the package directory:
 mkdir -p $PKG/usr/sbin
@@ -101,10 +102,10 @@ cp tools/eliloalt $PKG/usr/sbin
 cp -a $CWD/eliloconfig $PKG/usr/sbin
 chown root:root $PKG/usr/sbin/eliloconfig
 chmod 755 $PKG/usr/sbin/eliloconfig
-mkdir -p $PKG/var/log/setup
-cp -a $CWD/setup.ll.eliloconfig $PKG/var/log/setup
-chown root:root $PKG/var/log/setup/setup.ll.eliloconfig
-chmod 755 $PKG/var/log/setup/setup.ll.eliloconfig
+mkdir -p $PKG/var/lib/pkgtools/setup
+cp -a $CWD/setup.ll.eliloconfig $PKG/var/lib/pkgtools/setup
+chown root:root $PKG/var/lib/pkgtools/setup/setup.ll.eliloconfig
+chmod 755 $PKG/var/lib/pkgtools/setup/setup.ll.eliloconfig
 
 # Install translations for eliloconfig
 (
