@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Panwar108 <caspian7pena@gmail.com>, 2020
+msgid ""
+msgstr ""
+"Project-Id-Version: Salix\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-21 17:45+0300\n"
+"PO-Revision-Date: 2020-06-27 14:14+0000\n"
+"Last-Translator: Panwar108 <caspian7pena@gmail.com>\n"
+"Language-Team: Hindi (India) (http://www.transifex.com/gapan/salix/language/hi_IN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hi_IN\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: eliloconfig:81
+msgid "ERROR:  System is not running under UEFI."
+msgstr "त्रुटि : सिस्टम UEFI के अंतर्गत नहीं है।"
+
+#: eliloconfig:91
+msgid "ERROR:  No EFI System Partition mounted on /boot/efi."
+msgstr "त्रुटि : /boot/efi पर कोई EFI विभाजन माउंट नहीं है।"
+
+#: eliloconfig:110
+msgid "ERROR:  No kernel found at /boot/vmlinuz."
+msgstr "त्रुटि : /boot/vmliuz पर कोई कर्नेल नहीं मिला।"
+
+#: eliloconfig:116
+msgid "INSTALL ELILO"
+msgstr "ELILO इंस्टॉल करें"
+
+#: eliloconfig:117 eliloconfig:162 eliloconfig:197 eliloconfig:221
+msgid "ELILO (EFI Linux Loader) installation"
+msgstr "ELILO (EFI लिनक्स लोड साधन) इंस्टॉल"
+
+#: eliloconfig:118
+msgid ""
+"ELILO is a Linux boot loader for EFI based systems.  Installing ELILO will "
+"allow you to boot your Linux system from the hard drive after selecting it "
+"from the UEFI boot menu.  Since an EFI System Partition was detected on this"
+" machine, it is recommended that you install ELILO now.  Please select an "
+"option:"
+msgstr "ELILO, EFI आधारित सिस्टम हेतु लिनक्स बूट लोड साधन है। इसके इंस्टॉल उपरांत आप UEFI बूट मेन्यू से ELILO चयन कर अपना लिनक्स सिस्टम हार्ड ड्राइव से बूट कर सकेंगे। इस मशीन पर EFI सिस्टम विभाजन पाए जाने के कारण हम आपको अभी ELILO इंस्टॉल करने की सलाह देते हैं। कृपया विकल्प चुनें :"
+
+#: eliloconfig:124
+msgid "Install ELILO on the EFI System Partition"
+msgstr "EFI सिस्टम विभाजन पर ELILO इंस्टॉल करें"
+
+#: eliloconfig:125
+msgid "Do not install ELILO"
+msgstr "ELILO इंस्टॉल न करें"
+
+#: eliloconfig:161
+msgid "INSTALL BOOT MENU ENTRY?"
+msgstr "बूट मेन्यू प्रविष्टि इंस्टॉल करें?"
+
+#: eliloconfig:163
+msgid ""
+"Would you like to install a boot menu entry so that you can easily select "
+"Salix when you boot your machine?  WARNING:  DO NOT install a boot menu "
+"entry on Apple hardware.  Apple computers use a different type of EFI "
+"firmware, and efibootmgr has been known to damage them.  On all other "
+"computers, it is recommended to add a boot menu entry.  Please select an "
+"option:"
+msgstr "मशीन आरंभ पर सेलिक्स के सरल चयन हेतु क्या आप बूट मेन्यू प्रविष्टि जोड़ना चाहते हैं? चेतावनी : एप्पल के हार्डवेयर पर बूट मेन्यू प्रविष्टि इंस्टॉल न करें। एप्पल के कंप्यूटर का EFI फर्मवेयर भिन्न होता है व efibootmgr का उपयोग सिस्टम को हानि पहुँचा सकता है। अन्य सभी कंप्यूटर पर, बूट मेन्यू प्रविष्टि जोड़ना सुरक्षित है। कृपया विकल्प चुनें :"
+
+#: eliloconfig:170
+msgid "Install a boot menu entry"
+msgstr "बूट मेन्यू प्रविष्टि इंस्टॉल करें"
+
+#: eliloconfig:171
+msgid "Do not install a boot menu entry"
+msgstr "बूट मेन्यू प्रविष्टि इंस्टॉल न करें"
+
+#: eliloconfig:196
+msgid "REMOVE OLD Salix EFI BOOT ENTRY?"
+msgstr "पुराने सेलिक्स की बूट मेन्यू प्रविष्टि हटाएँ?"
+
+#: eliloconfig:198
+msgid ""
+"An old Salix boot entry has been found in your EFI boot menu. Would you like to remove this before installing the new Salix boot entry?  This is recommended.\n"
+"\n"
+"Old EFI boot menu entry:"
+msgstr "EFI बूट मेन्यू में पुराने सेलिक्स की बूट प्रविष्टि मिली। नई सेलिक्स बूट प्रविष्टि के इंस्टॉल से पहले क्या आप पुरानी प्रविष्टि हटाना चाहते हैं? हम इसकी सलाह देते हैं।\n\nपुरानी बूट मेन्यू प्रविष्टि :"
+
+#: eliloconfig:220
+msgid "EFI BOOT ENTRY INSTALLED"
+msgstr "EFI बूट प्रविष्टि इंस्टॉल की गई"
+
+#: eliloconfig:222
+msgid ""
+"A Salix boot entry has been installed to your EFI boot\n"
+"menu.\n"
+"\n"
+"EFI boot menu entry:"
+msgstr "EFI बूट मेन्यू में सेलिक्स हेतु बूट प्रविष्टि इंस्टॉल की गई।\n\nEFI बूट मेन्यू प्रविष्टि :"
