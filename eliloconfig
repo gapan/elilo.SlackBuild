@@ -141,7 +141,7 @@ elif [ -f $T_PX/etc/slint-version ]; then
 # file
 elif [ -f $T_PX/etc/slackware-version ]; then
   DNAME="Slackware"
-  VERSION="-`head -n 1 $T_PX /etc/slackware-version | sed "s/Slackware//" | tr -d ' '`"
+  VERSION="-`head -n 1 $T_PX/etc/slackware-version | sed "s/Slackware//" | tr -d ' '`"
 fi
 FULL_DISTRO_NAME="${DNAME}${EDITION}${VERSION}"
 
