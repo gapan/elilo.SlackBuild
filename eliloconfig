@@ -172,26 +172,26 @@ delay=1
 timeout=1
 #
 EOF
-cp -a $T_PX/boot/elilo-x86_64.efi $T_PX/boot/efi/EFI/Slackware/elilo.efi 1> /dev/null 2> /dev/null
+cp -a $T_PX/boot/elilo-x86_64.efi $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME}/elilo.efi 1> /dev/null 2> /dev/null
 if [ -r $T_PX/boot/initrd.gz ]; then
-  cp $T_PX/boot/vmlinuz-generic $T_PX/boot/efi/EFI/Slackware/vmlinuz 1> /dev/null 2> /dev/null
-  touch -r $T_PX/boot/vmlinuz-generic $T_PX/boot/efi/EFI/Slackware/vmlinuz
-  cp $T_PX/boot/initrd.gz $T_PX/boot/efi/EFI/Slackware 1> /dev/null 2> /dev/null
-  touch -r $T_PX/boot/initrd.gz $T_PX/boot/efi/EFI/Slackware/initrd.gz
-  cat << EOF >> $T_PX/boot/efi/EFI/Slackware/elilo.conf
+  cp $T_PX/boot/vmlinuz-generic $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME}/vmlinuz 1> /dev/null 2> /dev/null
+  touch -r $T_PX/boot/vmlinuz-generic $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME}/vmlinuz
+  cp $T_PX/boot/initrd.gz $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME} 1> /dev/null 2> /dev/null
+  touch -r $T_PX/boot/initrd.gz $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME}/initrd.gz
+  cat << EOF >> $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME}/elilo.conf
 image=vmlinuz
         label=vmlinuz
         initrd=initrd.gz
 EOF
 else
-  cp $T_PX/boot/vmlinuz-huge $T_PX/boot/efi/EFI/Slackware/vmlinuz 1> /dev/null 2> /dev/null
-  touch -r $T_PX/boot/vmlinuz-huge $T_PX/boot/efi/EFI/Slackware/vmlinuz
-  cat << EOF >> $T_PX/boot/efi/EFI/Slackware/elilo.conf
+  cp $T_PX/boot/vmlinuz-huge $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME}/vmlinuz 1> /dev/null 2> /dev/null
+  touch -r $T_PX/boot/vmlinuz-huge $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME}/vmlinuz
+  cat << EOF >> $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME}/elilo.conf
 image=vmlinuz
         label=vmlinuz
 EOF
 fi
-cat << EOF >> $T_PX/boot/efi/EFI/Slackware/elilo.conf
+cat << EOF >> $T_PX/boot/efi/EFI/${FULL_DISTRO_NAME}/elilo.conf
         read-only
         append="root=$ROOT_DEVICE vga=normal ro"
 EOF
